@@ -187,7 +187,7 @@ export async function GET(request: Request) {
       fonts: [
         {
           data: await readFile(
-            join(__dirname, "../../../../../public/ZenKakuGothicNew-Medium.ttf")
+            join(process.cwd(), "public/ZenKakuGothicNew-Medium.ttf")
           ),
           name: "zen",
           weight: 500,
@@ -195,7 +195,7 @@ export async function GET(request: Request) {
         },
         {
           data: await readFile(
-            join(__dirname, "../../../../../public/ZenKakuGothicNew-Bold.ttf")
+            join(process.cwd(), "public/ZenKakuGothicNew-Bold.ttf")
           ),
           name: "zen",
           weight: 700,
