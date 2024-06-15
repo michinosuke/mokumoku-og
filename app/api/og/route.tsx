@@ -5,9 +5,6 @@ import { join } from "path";
 // No need to install it.
 
 export async function GET(request: Request) {
-  const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";
-  const host = request.headers.get("host");
-  console.log(host);
   const { searchParams } = new URL(request.url);
   const title = searchParams.get("title");
   if (!title) return new Response("query title is required.");
@@ -17,12 +14,6 @@ export async function GET(request: Request) {
   if (!icon) return new Response("query icon is required.");
   const name = searchParams.get("name");
   if (!name) return new Response("query name is required.");
-  console.log(__dirname);
-  const { body: img } = await fetch(
-    "https://hermanmiller.co.jp/cdn/shop/files/AER1A13DWALPVPRCDCDBBDVP23101-3.png?height=1110&v=1697434387&width=900"
-  );
-  console.log({ img });
-  console.log({ title, day });
   return new ImageResponse(
     (
       <div
