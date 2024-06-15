@@ -165,7 +165,7 @@ export async function GET(request: Request) {
             src={icon}
             width={138}
             height={138}
-            style={{ borderRadius: "100%", margin: 0 }}
+            style={{ borderRadius: "100%", margin: 0, objectFit: "cover" }}
           />
           <div
             style={{
