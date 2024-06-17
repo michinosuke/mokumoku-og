@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "fs/promises";
 import { join } from "path";
+import { readFile } from "fs/promises";
 // App router includes @vercel/og.
 // No need to install it.
 
@@ -145,6 +145,7 @@ export async function GET(request: Request) {
             fontSize: 70,
             paddingBottom: 70,
             fontWeight: "bold",
+            whiteSpace: "pre-wrap",
           }}
         >
           {title}
