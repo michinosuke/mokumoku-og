@@ -65,6 +65,10 @@ export default function Upload() {
           </button>
           {copied && <span>コピーしました！</span>}
         </p>
+        <p className="text-sm mt-10 opacity-60">
+          ※ この URL
+          は一時的なものなので、記事内で参照するのに使ったりしないでください
+        </p>
       </main>
     );
   }
