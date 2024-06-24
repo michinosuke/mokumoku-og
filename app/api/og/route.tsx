@@ -1,12 +1,12 @@
 import { BgSvg01 } from "@/components/bg-svg-01";
 import { BgSvg02 } from "@/components/bg-svg-02";
 import { BgSvg03 } from "@/components/bg-svg-03";
-import { ImageResponse } from "next/og";
-import { join } from "path";
-import { readFile } from "fs/promises";
 import { Icon01 } from "@/components/icon-01";
 import { Icon02 } from "@/components/icon-02";
 import { Icon03 } from "@/components/icon-03";
+import { ImageResponse } from "next/og";
+import { join } from "path";
+import { readFile } from "fs/promises";
 // App router includes @vercel/og.
 // No need to install it.
 
@@ -80,8 +80,10 @@ export async function GET(request: Request) {
             }}
           >
             <div style={{ fontSize: 46, padding: "0 14px 12px 0" }}>#</div>
-            <div style={{ fontSize: 40, paddingBottom: 8 }}>もくもく</div>
-            <div style={{ fontSize: 42, paddingBottom: 7 }}>ブログリレー</div>
+            <div style={{ fontSize: 40, paddingBottom: 8 }}>もくもく会</div>
+            <div style={{ fontSize: 42, padding: "0 0 7px 7px" }}>
+              ブログリレー
+            </div>
             <div style={{ fontSize: 46, padding: "0 2px 14px 14px" }}>
               {day}
             </div>
