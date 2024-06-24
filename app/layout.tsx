@@ -16,7 +16,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  bootstrap();
+  if (
+    process.env.GLOBAL_AGENT_HTTP_PROXY &&
+    process.env.GLOBAL_AGENT_HTTPS_PROXY
+  ) {
+    bootstrap();
+  }
 
   return (
     <html lang="en">
