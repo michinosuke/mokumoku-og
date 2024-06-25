@@ -22,15 +22,19 @@ export async function GET(request: Request) {
   if (!name) return new Response("query name is required.");
 
   const BG = (() => {
-    if (Number(day) <= 10) return BgSvg01;
-    if (Number(day) <= 20) return BgSvg02;
-    return BgSvg03;
+    if (Number(day) <= 7 * 1) return BgSvg01;
+    if (Number(day) <= 7 * 2) return BgSvg02;
+    if (Number(day) <= 7 * 3) return BgSvg03;
+    if (Number(day) <= 7 * 4) return BgSvg01;
+    return BgSvg02;
   })();
 
   const Icon = (() => {
-    if (Number(day) <= 10) return Icon01;
-    if (Number(day) <= 20) return Icon02;
-    return Icon03;
+    if (Number(day) <= 7 * 1) return Icon01;
+    if (Number(day) <= 7 * 2) return Icon02;
+    if (Number(day) <= 7 * 3) return Icon03;
+    if (Number(day) <= 7 * 4) return Icon01;
+    return Icon02;
   })();
 
   return new ImageResponse(
