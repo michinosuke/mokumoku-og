@@ -6,7 +6,10 @@ export const BgSvg04 = ({ style }: { style: CSSProperties }) => (
     height="810"
     viewBox="0 0 1440 810"
     fill="none"
-    style={style}
+    style={{
+      ...style,
+      backgroundColor: "#FFFCEB",
+    }}
     xmlns="http://www.w3.org/2000/svg"
   >
     <g opacity="0.3">
