@@ -295,7 +295,7 @@ export async function GET(request: Request) {
           }}
         />
 
-        {/* {term <= 3 ? (
+        {term <= 3 ? (
           <HeaderLeft />
         ) : term === 4 ? (
           <HeaderCenter />
@@ -305,7 +305,7 @@ export async function GET(request: Request) {
 
         {term <= 3 ? <TitleLeft /> : <TitleCenter />}
 
-        {term <= 3 ? <ProfileLeft /> : <ProfileCenter />} */}
+        {term <= 3 ? <ProfileLeft /> : <ProfileCenter />}
       </div>
     ),
     {
