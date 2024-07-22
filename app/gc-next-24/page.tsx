@@ -70,9 +70,9 @@ export default function Example() {
           />
         </div>
         <div className="flex-1 flex gap-5 flex-col items-center">
-          <div className="flex flex-col gap-5 justify-center items-center">
+          <div className="flex flex-col gap-5 justify-center items-center min-h-20">
             {objectUrl && <img src={objectUrl} className="shadow-lg" />}
-            {objectUrl && isLoading && (
+            {isLoading && (
               <Loading
                 type="spokes"
                 className="absolute"
