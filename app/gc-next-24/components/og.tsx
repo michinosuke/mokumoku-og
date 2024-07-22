@@ -33,8 +33,8 @@ export const og = ({
         style={{
           width: 660,
           marginLeft: 50,
+          paddingTop: 40,
           fontSize,
-          top: 30,
           fontWeight: "bold",
           whiteSpace: "pre-wrap",
           color: "black",

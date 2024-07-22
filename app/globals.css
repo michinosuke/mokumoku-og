@@ -10,6 +10,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  @apply min-h-screen top-0;
   background: linear-gradient(
       to bottom,
       transparent,

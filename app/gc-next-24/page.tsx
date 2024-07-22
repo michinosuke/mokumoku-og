@@ -32,16 +32,20 @@ export default function Example() {
       });
   };
 
-  useEffect(() => reloadImage(), []);
-
   useEffect(() => {
-    setIsLoading(true);
-    reloadImage();
+    const timeoutId = setTimeout(() => {
+      setIsLoading(true);
+      reloadImage();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [title, fontSize]);
 
   return (
-    <main className="px-10 max-h-screen">
-      <h1 className="text-xl font-bold text-slate-600 mt-8">
+    <main className="px-10 min-h-screen relative">
+      <h1 className="text-xl font-bold text-slate-600 pt-8">
         Google Cloud Next 2024
       </h1>
       <div className="flex flex-col sm:flex-row gap-8 mt-5">
@@ -52,8 +56,8 @@ export default function Example() {
           <textarea
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className=" bg-yellow-500 text-white w-full rounded-lg border px-5 py-2 mt-3"
-            rows={3}
+            className=" bg-yellow-500 text-white w-full rounded-lg border px-5 py-2 mt-3 font-bold"
+            rows={6}
           />
           <span className="whitespace-nowrap font-bold border-b-2 border-yellow-500 text-slate-600 mt-10">
             フォントサイズ
@@ -86,6 +90,10 @@ export default function Example() {
           )}
         </div>
       </div>
+      <div className="h-16" />
+      <footer className="absolute bottom-5 text-slate-300">
+        ©︎ Michinosuke
+      </footer>
     </main>
   );
 }
