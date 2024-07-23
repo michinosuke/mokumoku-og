@@ -6,9 +6,7 @@ import ReactLoading from "react-loading";
 
 export default function Example() {
   const [isLoading, setIsLoading] = useState(true);
-  const [title, setTitle] = useState(
-    "サイト内の検索コストを大幅削減！日本最大級のデリバリーサービス「出前館」に Vertex AI Search を導入した話"
-  );
+  const [title, setTitle] = useState("");
   const [fontSize, setFontSize] = useState(50);
   const [objectUrl, setObjectUrl] = useState("");
   const [titleWidth, setTitleWidth] = useState<"normal" | "full">("normal");
