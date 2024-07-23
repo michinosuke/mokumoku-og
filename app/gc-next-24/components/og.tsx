@@ -2,10 +2,12 @@ export const og = ({
   title,
   fontSize,
   origin,
+  titleWidth,
 }: {
   title: string;
   fontSize: number;
   origin: string;
+  titleWidth: string;
 }) => {
   return (
     <div
@@ -31,8 +33,9 @@ export const og = ({
       />
       <h1
         style={{
-          width: 660,
+          width: titleWidth === "normal" ? 750 : "100%",
           marginLeft: 50,
+          marginRight: 50,
           paddingTop: 40,
           fontSize,
           fontWeight: "bold",

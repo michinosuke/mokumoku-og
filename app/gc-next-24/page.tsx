@@ -7,19 +7,17 @@ import ReactLoading from "react-loading";
 export default function Example() {
   const [isLoading, setIsLoading] = useState(true);
   const [title, setTitle] = useState(
-    [
-      "タイトルタイトルタイトル",
-      "タイトルタイトルタイトル",
-      "タイトルタイトルタイトル",
-    ].join("\n")
+    "サイト内の検索コストを大幅削減！日本最大級のデリバリーサービス「出前館」に Vertex AI Search を導入した話"
   );
   const [fontSize, setFontSize] = useState(50);
   const [objectUrl, setObjectUrl] = useState("");
+  const [titleWidth, setTitleWidth] = useState<"normal" | "full">("normal");
 
   const getImageUrl = () =>
     `/gc-next-24/og?${new URLSearchParams({
       title: title || "タイトル",
       fontSize: fontSize.toString(),
+      titleWidth,
     })}`;
 
   const reloadImage = () => {
@@ -41,7 +39,7 @@ export default function Example() {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [title, fontSize]);
+  }, [title, fontSize, titleWidth]);
 
   return (
     <main className="px-10 min-h-screen relative">
@@ -68,6 +66,31 @@ export default function Example() {
             onChange={(e) => setFontSize(parseInt(e.target.value, 10))}
             className="bg-yellow-500 text-white px-5 py-2 rounded-lg mt-3 w-24"
           />
+          <span className="whitespace-nowrap font-bold border-b-2 border-yellow-500 text-slate-600 mt-10">
+            タイトルの幅
+          </span>
+          <div className="flex mt-3">
+            <button
+              onClick={(e) => setTitleWidth("normal")}
+              className={`px-5 py-2 whitespace-nowrap rounded-lg ${
+                titleWidth === "normal"
+                  ? "bg-yellow-500 text-white"
+                  : "text-slate-600"
+              }`}
+            >
+              制限あり
+            </button>
+            <button
+              onClick={(e) => setTitleWidth("full")}
+              className={`px-5 py-2 whitespace-nowrap rounded-lg ${
+                titleWidth === "full"
+                  ? "bg-yellow-500 text-white"
+                  : "text-slate-600"
+              }`}
+            >
+              制限なし
+            </button>
+          </div>
         </div>
         <div className="flex-1 flex gap-5 flex-col items-center">
           <div className="flex flex-col gap-5 justify-center items-center min-h-20">

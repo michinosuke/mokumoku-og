@@ -12,6 +12,8 @@ export async function GET(request: Request) {
   if (!title) return new Response("query title is required.");
   const fontSize = searchParams.get("fontSize");
   if (!fontSize) return new Response("query fontSize is required.");
+  const titleWidth = searchParams.get("titleWidth");
+  if (!titleWidth) return new Response("query titleWidth is required.");
 
   console.log(`${origin}/gc-next-24-bg.png`);
 
@@ -20,6 +22,7 @@ export async function GET(request: Request) {
       title,
       fontSize: parseInt(fontSize, 10),
       origin,
+      titleWidth,
     }),
     {
       width: 1440,
