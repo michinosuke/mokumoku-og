@@ -89,6 +89,13 @@ export default function Example() {
               制限なし
             </button>
           </div>
+
+          <div className="mt-8 px-4 py-3 text-sm text-red-500 font-semibold border-2 rounded-lg border-red-500">
+            <p>⚠️ 注意事項</p>
+            <p className="mt-2">
+              右側の背景デザインになるべく被らないように改行を入れる・フォントサイズの調整をお願いします
+            </p>
+          </div>
         </div>
         <div className="flex-1 flex gap-5 flex-col items-center">
           <div className="flex flex-col gap-5 justify-center items-center min-h-20">
@@ -112,7 +119,7 @@ export default function Example() {
         </div>
       </div>
       <div className="h-16" />
-      <footer className="absolute bottom-5 text-slate-300">
+      <footer className="absolute bottom-5 text-slate-400">
         ©︎ Michinosuke
       </footer>
     </main>
