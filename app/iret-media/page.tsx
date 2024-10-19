@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 
 import Loading from "react-loading";
-import ReactLoading from "react-loading";
 
 type Template = { url: string; titleColor: string };
 
