@@ -7,7 +7,12 @@ import ReactLoading from "react-loading";
 
 type Template = { url: string; titleColor: string };
 
-const host = location.protocol + "//" + location.host;
+const host: string = (() => {
+  if (typeof location !== "undefined") {
+    return location.protocol + "//" + location.host;
+  }
+  return "";
+})();
 
 const templates: Template[] = [
   { url: `${host}/iret-media-template/1.png`, titleColor: "white" },
