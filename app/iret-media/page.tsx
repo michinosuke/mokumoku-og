@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import Loading from "react-loading";
+import { format } from "date-fns";
 
 type Template = { url: string; titleColor: string };
 
@@ -199,7 +200,10 @@ export default function IretMedia() {
             )}
           </div>
           {objectUrl && (
-            <a href={objectUrl} download="gc-next-24-og.jpg">
+            <a
+              href={objectUrl}
+              download={`iret-media-${format(new Date(), "yyyyMMdd-HHmmss")}`}
+            >
               <button className="bg-slate-700 text-white px-3 py-2 rounded-lg font-bold">
                 ダウンロード
               </button>
