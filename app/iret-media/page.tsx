@@ -103,8 +103,8 @@ export default function IretMedia() {
                   className={`${
                     selectedTemplate.url === template.url
                       ? "border-2 border-iret-media-theme"
-                      : "opacity-60"
-                  } shrink-0`}
+                      : "opacity-60 hover:opacity-70"
+                  } shrink-0 cursor-pointer`}
                   onClick={() => setSelectedTemplate(template)}
                 >
                   <img
@@ -135,7 +135,7 @@ export default function IretMedia() {
               <button
                 onClick={(e) => setTitleAlign("left")}
                 className={`px-5 py-2 whitespace-nowrap rounded-lg ${
-                  titleAlign === "left" ? "bg-slate-700" : ""
+                  titleAlign === "left" ? "bg-slate-700" : "hover:bg-slate-200"
                 }`}
               >
                 <div className="w-8 h-8 flex flex-col justify-between">
@@ -164,7 +164,9 @@ export default function IretMedia() {
               <button
                 onClick={(e) => setTitleAlign("center")}
                 className={`px-5 py-2 whitespace-nowrap rounded-lg ${
-                  titleAlign === "center" ? "bg-slate-700" : ""
+                  titleAlign === "center"
+                    ? "bg-slate-700"
+                    : "hover:bg-slate-200"
                 }`}
               >
                 <div className="w-8 h-8 flex flex-col justify-between items-center">
@@ -209,7 +211,7 @@ export default function IretMedia() {
                 href={objectUrl}
                 download={`iret-media-${format(new Date(), "yyyyMMdd-HHmmss")}`}
               >
-                <button className="bg-slate-700 text-white px-3 py-2 rounded-lg font-bold">
+                <button className="bg-slate-700 text-white px-3 py-2 rounded-lg font-bold transition-all hover:shadow hover:bg-iret-media-theme">
                   ダウンロード
                 </button>
               </a>
