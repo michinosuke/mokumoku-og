@@ -207,10 +207,7 @@ export default function IretMedia() {
               )}
             </div>
             {objectUrl && (
-              <a
-                href={objectUrl}
-                download={`iret-media-${format(new Date(), "yyyyMMdd-HHmmss")}`}
-              >
+              <a href={objectUrl} download={`eyecatch-{記事のID}`}>
                 <button className="bg-slate-700 text-white px-3 py-2 rounded-lg font-bold transition-all hover:shadow hover:bg-iret-media-theme">
                   ダウンロード
                 </button>
