@@ -1,0 +1,21 @@
+.gradation-button:hover {
+  background: linear-gradient(45deg, #0b0058 0%, #90297c 100%);
+}
+
+.gradation {
+  background: linear-gradient(180deg, #0b0058 0%, #90297c 100%);
+  background-size: 200% 200%;
+  animation: gradationAnim 10s ease infinite;
+}
+
+@keyframes gradationAnim {
+  0% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
