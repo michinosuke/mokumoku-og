@@ -17,10 +17,6 @@ const host: string = (() => {
 
 const templates: Template[] = [
   {
-    url: `${host}/re-invent-2024-template/eyecatch-reinvent-others.png`,
-    titleColor: "white",
-  },
-  {
     url: `${host}/re-invent-2024-template/eyecatch-reinvent-session.png`,
     titleColor: "white",
   },
@@ -30,6 +26,10 @@ const templates: Template[] = [
   },
   {
     url: `${host}/re-invent-2024-template/eyecatch-reinvent-workshop.png`,
+    titleColor: "white",
+  },
+  {
+    url: `${host}/re-invent-2024-template/eyecatch-reinvent-others.png`,
     titleColor: "white",
   },
 ];
