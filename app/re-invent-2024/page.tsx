@@ -212,7 +212,7 @@ export default function IretMedia() {
                 <Loading
                   type="spokes"
                   className="absolute"
-                  color="#58db15"
+                  color="#90297c"
                   width={70}
                 />
               )}
