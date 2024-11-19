@@ -37,7 +37,7 @@ const templates: Template[] = [
 export default function IretMedia() {
   const [isLoading, setIsLoading] = useState(true);
   const [title, setTitle] = useState("");
-  const [fontSize, setFontSize] = useState(50);
+  const [fontSize, setFontSize] = useState(72);
   const [objectUrl, setObjectUrl] = useState("");
   const [titleWidth, setTitleWidth] = useState<"normal" | "full">("normal");
   const [titleAlign, setTitleAlign] = useState<"center" | "left">("center");
