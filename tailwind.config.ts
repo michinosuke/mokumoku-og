@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         "iret-media-theme": "#58db15",
         "reinvent-purple": "#90297c",
+        "gcn25-yellow": "#f7b80e",
       },
     },
   },
