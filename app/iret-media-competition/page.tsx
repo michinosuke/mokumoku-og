@@ -16,36 +16,36 @@ const host: string = (() => {
 
 const templates: Template[] = [
   {
-    url: `${host}/iret-media-competition-template/1.png`,
-    titleColor: "white",
-    team: "生成AI - A チーム",
-  },
-  {
-    url: `${host}/iret-media-competition-template/2.png`,
-    titleColor: "white",
-    team: "生成AI - B チーム",
-  },
-  {
-    url: `${host}/iret-media-competition-template/3.png`,
-    titleColor: "white",
-    team: "開発 チーム",
-  },
-  {
-    url: `${host}/iret-media-competition-template/4.png`,
+    url: `${host}/iret-media-competition-template/eyecatch-matchup-genai-a.png`,
     titleColor: "black",
-    team: "インフラ チーム",
+    team: "生成AI - AI-ret",
   },
   {
-    url: `${host}/iret-media-competition-template/5.png`,
+    url: `${host}/iret-media-competition-template/eyecatch-matchup-genai-i.png`,
     titleColor: "black",
-    team: "デザイン チーム",
+    team: "生成AI - GenAI Notes",
+  },
+  {
+    url: `${host}/iret-media-competition-template/eyecatch-matchup-dev.png`,
+    titleColor: "black",
+    team: "開発 - DEVLog9",
+  },
+  {
+    url: `${host}/iret-media-competition-template/eyecatch-matchup-infra.png`,
+    titleColor: "black",
+    team: "インフラ - VPC than MCP",
+  },
+  {
+    url: `${host}/iret-media-competition-template/eyecatch-matchup-design.png`,
+    titleColor: "black",
+    team: "デザイン - GORILAB",
   },
 ];
 
 export default function IretMedia() {
   const [isLoading, setIsLoading] = useState(true);
   const [title, setTitle] = useState("");
-  const [fontSize, setFontSize] = useState(50);
+  const [fontSize, setFontSize] = useState(72);
   const [objectUrl, setObjectUrl] = useState("");
   const [titleWidth, setTitleWidth] = useState<"normal" | "full">("normal");
   const [titleAlign, setTitleAlign] = useState<"center" | "left">("center");
@@ -116,8 +116,7 @@ export default function IretMedia() {
               テンプレート（{templates.length}種）
             </span>
             <p className="text-xs mt-3 text-slate-500">
-              ※{templates.length}
-              種類ありますのでお好みのデザインを選択してください。横にスライドすると全てのデザインを確認できます。
+              所属チームのデザインを選択してください。
             </p>
             <ul className="flex gap-3 mt-5 overflow-x-scroll items-center">
               {templates.map((template, i) => (
@@ -243,11 +242,6 @@ export default function IretMedia() {
                 </button>
               </a>
             )}
-            <div className="mt-14 px-5 py-2 text-slate-700 border-4 border-iret-media-theme border-dotted rounded-lg">
-              <p>
-                ※画像が設定されていない場合は、マーケGにて作成させていただきます。
-              </p>
-            </div>
           </div>
         </div>
       </main>
