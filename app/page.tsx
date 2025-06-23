@@ -7,6 +7,7 @@ export default function Home() {
     { href: "/iret-media", name: "iret media" },
     { href: "/iret-media-competition", name: "iret media 対抗戦" },
     { href: "/re-invent-2024", name: "re:Invent 2024" },
+    { href: "/aws-summit", name: "AWS Summit" },
   ];
 
   return (
