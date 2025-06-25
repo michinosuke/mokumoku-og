@@ -34,7 +34,7 @@ export default function IretMedia() {
   );
 
   const getImageUrl = () =>
-    `/iret-media/og?${new URLSearchParams({
+    `/aws-summit/og?${new URLSearchParams({
       title: title || "タイトル",
       fontSize: fontSize.toString(),
       titleWidth,

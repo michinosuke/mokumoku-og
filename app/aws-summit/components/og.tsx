@@ -45,7 +45,7 @@ export const og = ({
         <h1
           style={{
             width: "100%",
-            paddingTop: 40,
+            marginTop: -30,
             display: "flex",
             justifyContent: titleAlign === "center" ? "center" : "flex-start",
             textAlign: titleAlign ?? "center",
