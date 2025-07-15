@@ -4,6 +4,7 @@ export default function Home() {
   const links = [
     { href: "/gc-next-24", name: "GC Next 24" },
     { href: "/gc-next-25", name: "GC Next 25" },
+    { href: "/gc-next-tokyo-25", name: "GC Next Tokyo 25" },
     { href: "/iret-media", name: "iret media" },
     { href: "/iret-media-competition", name: "iret media 対抗戦" },
     { href: "/re-invent-2024", name: "re:Invent 2024" },
