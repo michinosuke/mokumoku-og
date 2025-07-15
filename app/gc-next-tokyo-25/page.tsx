@@ -28,7 +28,7 @@ export default function IretMedia() {
   const [fontSize, setFontSize] = useState(72);
   const [objectUrl, setObjectUrl] = useState("");
   const [titleWidth, setTitleWidth] = useState<"normal" | "full">("normal");
-  const [titleAlign, setTitleAlign] = useState<"center" | "left">("center");
+  const [titleAlign, setTitleAlign] = useState<"left">("left");
   const [selectedTemplate, setSelectedTemplate] = useState<Template>(
     templates[0]
   );
@@ -166,37 +166,6 @@ export default function IretMedia() {
                   <div
                     className={`${
                       titleAlign === "left" ? "bg-white" : "bg-black"
-                    } h-1 rounded-full w-4/5`}
-                  ></div>
-                </div>
-              </button>
-              <button
-                onClick={(e) => setTitleAlign("center")}
-                className={`px-5 py-2 whitespace-nowrap rounded-lg ${
-                  titleAlign === "center"
-                    ? "bg-slate-700"
-                    : "hover:bg-slate-200"
-                }`}
-              >
-                <div className="w-8 h-8 flex flex-col justify-between items-center">
-                  <div
-                    className={`${
-                      titleAlign === "center" ? "bg-white" : "bg-black"
-                    } h-1 rounded-full w-full`}
-                  ></div>
-                  <div
-                    className={`${
-                      titleAlign === "center" ? "bg-white" : "bg-black"
-                    } h-1 rounded-full w-4/5`}
-                  ></div>
-                  <div
-                    className={`${
-                      titleAlign === "center" ? "bg-white" : "bg-black"
-                    } h-1 rounded-full w-full`}
-                  ></div>
-                  <div
-                    className={`${
-                      titleAlign === "center" ? "bg-white" : "bg-black"
                     } h-1 rounded-full w-4/5`}
                   ></div>
                 </div>
